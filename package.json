@@ -1,0 +1,36 @@
+{
+  "name": "design-library",
+  "version": "1.0.0",
+  "description": "custom design-library for react.",
+  "repository": {
+    "type": "git",
+    "url": "git@github-own:huzaifahGoher/design-library.git"
+  },
+  "license": "ISC",
+  "author": "huzaifah <huzaifah191001@gmail.com>",
+  "type": "commonjs",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@types/react": "^19.2.14",
+    "rollup": "^4.60.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.37.0",
+    "typescript": "^6.0.3"
+  }
+}
