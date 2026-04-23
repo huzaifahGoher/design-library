@@ -9,8 +9,8 @@ export const Button = ({ variant = "primary", children, style, ...props }: Butto
   const theme = useTheme();
 
   const variants = {
-    primary: { bg: theme.colors.primary, fg: theme.colors.primary },
-    secondary: { bg: theme.colors.secondary, fg: theme.colors.secondary },
+    primary: { bg: theme.colors.primary, fg: theme.colors.text },
+    secondary: { bg: theme.colors.secondary, fg: theme.colors.text },
   };
 
   const { bg, fg } = variants[variant];
