@@ -12,6 +12,7 @@ export const useTheme = () => useContext(ThemeContext);
 interface ThemeProviderProps {
   lightTheme?: Partial<ThemeTypes>;
   darkTheme?: Partial<ThemeTypes>;
+  themeType?: "light" | "dark";
   children: React.ReactNode;
 }
 
@@ -27,8 +28,8 @@ function deepMerge(base: any, override: any): any {
   return result;
 }
 
-export const ThemeProvider = ({ lightTheme, darkTheme, children }: ThemeProviderProps) => {
-  const colorScheme = useColorScheme();
+export const ThemeProvider = ({ lightTheme, darkTheme, themeType = "dark", children }: ThemeProviderProps) => {
+  const colorScheme = themeType;
   const base = colorScheme === "dark" ? defaultDarkTheme : defaultLightTheme;
   const override = colorScheme === "dark" ? darkTheme : lightTheme;
   const merged = useMemo(
