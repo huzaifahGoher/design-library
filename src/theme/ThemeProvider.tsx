@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useMemo } from "react";
 import { ThemeTypes } from "../types/theme/themetypes";
 import { defaultDarkTheme, defaultLightTheme } from "./defaulttheme";
-import { useColorScheme, ColorScheme } from "../hooks/useColorScheme";
 
 const ThemeContext = createContext<ThemeTypes & { colorScheme: ColorScheme }>(
   { ...defaultLightTheme, colorScheme: "light" }
