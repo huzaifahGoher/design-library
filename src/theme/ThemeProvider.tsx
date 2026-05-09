@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useMemo } from "react";
 import { ThemeTypes } from "../types/theme/themetypes";
-import { defaultDarkTheme, defaultLightTheme } from "./defaulttheme";
+import { darkSemantic, semantic } from "./defaulttheme";
 
 const ThemeContext = createContext<ThemeTypes>(
-  { ...defaultLightTheme }
+  { ...semantic }
 );
 
 export const useTheme = () => useContext(ThemeContext);
@@ -29,7 +29,7 @@ function deepMerge(base: any, override: any): any {
 
 export const ThemeProvider = ({ lightTheme, darkTheme, themeType = "dark", children }: ThemeProviderProps) => {
   const colorScheme = themeType;
-  const base = colorScheme === "dark" ? defaultDarkTheme : defaultLightTheme;
+  const base = colorScheme === "dark" ? darkSemantic : semantic;
   const override = colorScheme === "dark" ? darkTheme : lightTheme;
   const merged = useMemo(
     () => ({ ...(override ? deepMerge(base, override) : base), colorScheme }),
