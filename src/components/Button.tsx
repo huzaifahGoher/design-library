@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { useTheme } from "../theme/ThemeProvider";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   active?: boolean;
 }
 
-export const Button = ({ children, style, active = false, ...props }: ButtonProps) => {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ children, style, active = false, ...props }, ref) => {
   const theme = useTheme();
   const [hovering, setHovering] = useState(false);
 
@@ -23,9 +23,10 @@ export const Button = ({ children, style, active = false, ...props }: ButtonProp
         cursor: "pointer",
         ...style,
       }}
+      ref={ref}
       {...props}
     >
       {children}
     </button>
   );
-};
+});
