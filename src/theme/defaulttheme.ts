@@ -73,6 +73,14 @@ export const colors = {
   starBg:             "#FEF3C7",
   starText:           "#92400E",
 
+  // Danger / Destructive
+  dangerRed:          "#DC2626",
+  dangerRedDark:      "#B91C1C",
+  dangerBg:           "#FEF2F2",
+  dangerBorder:       "#FECACA",
+  dangerText:         "#DC2626",
+  dangerTextOnDanger: "#FFFFFF",
+
   // Neutral Greys
   grey50:             "#F9FAFB",
   grey100:            "#F3F4F6",
@@ -136,6 +144,14 @@ export const darkColors = {
   // Star Badge
   starBg:             "#451A03",
   starText:           "#FCD34D",
+
+  // Danger / Destructive
+  dangerRed:          "#DC2626",
+  dangerRedLight:     "#EF4444",
+  dangerBg:           "#450A0A",
+  dangerBorder:       "#991B1B",
+  dangerText:         "#FCA5A5",
+  dangerTextOnDanger: "#FFFFFF",
 
   // Neutral Zinc
   zinc50:             "#FAFAFA",
@@ -204,6 +220,14 @@ export const semantic = {
     badgeNiceText:      colors.badgeNiceText,
     starBg:             colors.starBg,
     starText:           colors.starText,
+
+    // Danger / Destructive
+    actionDanger:       colors.dangerRed,
+    actionDangerHover:  colors.dangerRedDark,
+    bgDanger:           colors.dangerBg,
+    borderDanger:       colors.dangerBorder,
+    textDanger:         colors.dangerText,
+    textOnDanger:       colors.dangerTextOnDanger,
   },
   ...spacings,
 };
@@ -265,6 +289,14 @@ export const darkSemantic = {
     badgeNiceText:      darkColors.badgeNiceText,
     starBg:             darkColors.starBg,
     starText:           darkColors.starText,
+
+    // Danger / Destructive
+    actionDanger:       darkColors.dangerRed,
+    actionDangerHover:  darkColors.dangerRedLight,
+    bgDanger:           darkColors.dangerBg,
+    borderDanger:       darkColors.dangerBorder,
+    textDanger:         darkColors.dangerText,
+    textOnDanger:       darkColors.dangerTextOnDanger,
   },
   ...spacings,
 };

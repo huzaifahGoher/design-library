@@ -1,4 +1,5 @@
-export {Button} from "./components/Button";
+export {Button, getVariantStyles} from "./components/Button";
+export type {ButtonVariant} from "./components/Button";
 export {Checkbox} from "./components/Checkbox";
 export type {CheckboxVariant} from "./components/Checkbox";
 export {Select} from "./components/Select";

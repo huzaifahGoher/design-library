@@ -57,6 +57,14 @@ export interface SemanticColors {
   badgeNiceText:      string;
   starBg:             string;
   starText:           string;
+
+  // Danger / Destructive
+  actionDanger:       string;
+  actionDangerHover:  string;
+  bgDanger:           string;
+  borderDanger:       string;
+  textDanger:         string;
+  textOnDanger:       string;
 }
 
 export interface SemanticSpacing {
